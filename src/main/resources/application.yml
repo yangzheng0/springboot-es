@@ -1,0 +1,39 @@
+server:
+  port: 9090
+
+spring:
+  elasticsearch:
+    rest:
+      uris: http://192.168.91.129:9200
+    bboss:
+      elasticUser:
+      elasticPassword:
+      elasticsearch:
+        rest:
+          hostNames: 192.168.91.129:9200
+        dateFormat: yyyy-MM-dd hh:mm:ss
+        timeZone: Asia/Shanghai
+        ttl: 2d
+        showTemplate: true
+        discoverHost: false
+      dslfile:
+        refreshInterval: -1
+      http:
+        timeoutConnection: 400000
+        timeoutSocket: 400000
+        connectionRequestTimeout: 400000
+        retryTime: 1
+        maxLineLength: -1
+        maxHeaderCount: 200
+        maxTotal: 400
+        defaultMaxPerRoute: 200
+        soReuseAddress: false
+        soKeepAlive: false
+        timeToLive: 3600000
+        keepAlive: 3600000
+        keystore:
+        keyPassword:
+        hostnameVerifier:
+es:
+  basePath: esmapper/
+  indexs: teacher,student
